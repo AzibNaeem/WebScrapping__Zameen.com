@@ -57,104 +57,82 @@ This project automates the collection of property data from **Zameen.com**, Paki
 - **Very large plots are rare** in the dataset  
 - **Consistent unit conversion** for accurate comparisons  
 
-Usage
+## 🚦 Usage  
+1. Open the Jupyter notebook: **L23-2541__Assignment_01.ipynb**  
+2. Run the scraping cells to collect data  
+3. Execute data cleaning and analysis cells  
+4. Export results to CSV files  
 
-Open the Jupyter notebook: L23-2541__Assignment_01.ipynb
+---
 
-Run the scraping cells to collect data
+## 📊 Sample Output  
+The project generates two main output files:  
 
-Execute data cleaning and analysis cells
+- **zameen.csv** – Raw scraped data with all original fields  
+- **zameen_clean.csv** – Processed data with:  
+  - Standardized price values  
+  - Normalized area measurements  
+  - Removed duplicates and null values  
 
-Export results to CSV files
+---
 
-📊 Sample Output
+## 🔧 Technical Details  
 
-The project generates two main output files:
+### Web Scraping Strategy:  
+- **Pagination Handling**: Scrapes 100 pages with 25 listings each  
+- **Rate Limiting**: 2-second delays between requests  
+- **Error Resilience**: Continues scraping even if individual pages fail  
+- **User-Agent Rotation**: Mimics real browser requests  
 
-zameen.csv – Raw scraped data with all original fields
+### Data Cleaning Pipeline:  
+- **Price Fixing**: Converts textual prices to numeric values  
+- **Area Conversion**: Standardizes area measurements to square feet  
+- **Duplicate Removal**: Based on title and location combination  
+- **Null Value Handling**: Removes records with missing essential data  
 
-zameen_clean.csv – Processed data with:
+---
 
-Standardized price values
+## 📈 Analysis Capabilities  
 
-Normalized area measurements
+### Current Analysis:  
+- Price distribution trends  
+- Area size patterns  
+- Basic statistical summaries  
 
-Removed duplicates and null values
+### Potential Extensions:  
+- Location-based price analysis  
+- Price per square foot calculations  
+- Time-series trend analysis  
+- Comparative market analysis  
 
-🔧 Technical Details
-Web Scraping Strategy:
+---
 
-Pagination Handling: Scrapes 100 pages with 25 listings each
+## ⚠️ Important Notes  
+- **Ethical Scraping**: Respects website terms of service with reasonable request rates  
+- **Data Accuracy**: Dependent on source website data quality  
+- **Market Changes**: Real estate data is time-sensitive and subject to change  
 
-Rate Limiting: 2-second delays between requests
+---
 
-Error Resilience: Continues scraping even if individual pages fail
+## 🎓 Educational Value  
+This project demonstrates:  
+- Web scraping best practices  
+- Data cleaning and preprocessing  
+- Real-world data analysis  
+- Pakistani real estate market understanding  
+- Python data science workflow  
 
-User-Agent Rotation: Mimics real browser requests
+---
 
-Data Cleaning Pipeline:
+## 🤝 Contributing  
+Feel free to fork this project and submit pull requests for:  
+- Additional data analysis  
+- Improved scraping techniques  
+- Enhanced visualization  
+- New feature implementations  
 
-Price Fixing: Converts textual prices to numeric values
+---
 
-Area Conversion: Standardizes area measurements to square feet
-
-Duplicate Removal: Based on title and location combination
-
-Null Value Handling: Removes records with missing essential data
-
-📈 Analysis Capabilities
-Current Analysis:
-
-Price distribution trends
-
-Area size patterns
-
-Basic statistical summaries
-
-Potential Extensions:
-
-Location-based price analysis
-
-Price per square foot calculations
-
-Time-series trend analysis
-
-Comparative market analysis
-
-⚠️ Important Notes
-
-Ethical Scraping: Respects website terms of service with reasonable request rates
-
-Data Accuracy: Dependent on source website data quality
-
-Market Changes: Real estate data is time-sensitive and subject to change
-
-🎓 Educational Value
-
-This project demonstrates:
-
-Web scraping best practices
-
-Data cleaning and preprocessing
-
-Real-world data analysis
-
-Pakistani real estate market understanding
-
-Python data science workflow
-
-🤝 Contributing
-
-Feel free to fork this project and submit pull requests for:
-
-Additional data analysis
-
-Improved scraping techniques
-
-Enhanced visualization
-
-New feature implementations
-
-📄 License
-
-This project is for educational purposes. Please ensure compliance with Zameen.com's terms of service when using this code.
+## 📄 License  
+This project is for **educational purposes**.  
+Please ensure compliance with **Zameen.com's terms of service** when using this code.  
